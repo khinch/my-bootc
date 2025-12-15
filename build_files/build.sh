@@ -10,7 +10,19 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux alacritty megasync megasync-nautilus veracrypt
+dnf5 install -y tmux alacritty 
+
+cd /tmp
+curl -LO "https://launchpad.net/veracrypt/trunk/1.26.24/+download/veracrypt-1.26.24-Fedora-40-x86_64.rpm"
+curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm"
+curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/nautilus-megasync-Fedora_42.x86_64.rpm"
+curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
+
+sudo dnf install -y \
+  ./veracrypt-1.26.24-Fedora-40-x86_64.rpm \
+  ./megasync-Fedora_42.x86_64.rpm \
+  ./nautilus-megasync-Fedora_42.x86_64.rpm \
+  ./thunar-megasync-Fedora_42.x86_64.rpm
 
 # Use a COPR Example:
 #
