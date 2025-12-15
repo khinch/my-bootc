@@ -23,13 +23,13 @@ dnf install -y veracrypt-1.26.24-Fedora-40-x86_64.rpm
 
 # Megasync
 curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm"
-curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/nautilus-megasync-Fedora_42.x86_64.rpm"
-curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
+#curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/nautilus-megasync-Fedora_42.x86_64.rpm"
+#curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
 
 dnf install -y --nogpgcheck \
   ./megasync-Fedora_42.x86_64.rpm \
-  ./nautilus-megasync-Fedora_42.x86_64.rpm \
-  ./thunar-megasync-Fedora_42.x86_64.rpm
+#  ./nautilus-megasync-Fedora_42.x86_64.rpm \
+#  ./thunar-megasync-Fedora_42.x86_64.rpm
 
 # Use a COPR Example:
 #
