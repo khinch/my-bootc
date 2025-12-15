@@ -38,7 +38,7 @@ curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.
 rm /opt
 mkdir /opt
 
-dnf install -y --nogpgcheck \
+dnf install -y --nogpgcheck --setopt=tsflags=noscripts \
   ./megasync-Fedora_42.x86_64.rpm \
 #  ./nautilus-megasync-Fedora_42.x86_64.rpm \
 #  ./thunar-megasync-Fedora_42.x86_64.rpm
