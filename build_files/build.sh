@@ -31,9 +31,12 @@ curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.
 #chmod 755 /opt/megasync
 
 # What is going on with /opt?
-ls -lah /
-ls -lah /opt
-ls -lah /opt/megasync
+#ls -lah /
+#ls -lah /opt
+#ls -lah /opt/megasync
+
+rm /opt
+mkdir /opt
 
 dnf install -y --nogpgcheck \
   ./megasync-Fedora_42.x86_64.rpm \
@@ -41,9 +44,9 @@ dnf install -y --nogpgcheck \
 #  ./thunar-megasync-Fedora_42.x86_64.rpm
 
 # What is going on with /opt?
-ls -lah /
-ls -lah /opt
-ls -lah /opt/megasync
+#ls -lah /
+#ls -lah /opt
+#ls -lah /opt/megasync
 
 # Use a COPR Example:
 #
