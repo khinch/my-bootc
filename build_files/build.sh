@@ -23,30 +23,16 @@ dnf install -y veracrypt-1.26.24-Fedora-40-x86_64.rpm
 
 # Megasync
 curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm"
-#curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/nautilus-megasync-Fedora_42.x86_64.rpm"
-#curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
-
-#rm -rf /opt/megasync || true
-#mkdir -p /opt/megasync
-#chmod 755 /opt/megasync
-
-# What is going on with /opt?
-#ls -lah /
-#ls -lah /opt
-#ls -lah /opt/megasync
+curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/nautilus-megasync-Fedora_42.x86_64.rpm"
+curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
 
 rm /opt
 mkdir /opt
 
 dnf install -y --nogpgcheck --setopt=tsflags=noscripts \
   ./megasync-Fedora_42.x86_64.rpm \
-#  ./nautilus-megasync-Fedora_42.x86_64.rpm \
-#  ./thunar-megasync-Fedora_42.x86_64.rpm
-
-# What is going on with /opt?
-#ls -lah /
-#ls -lah /opt
-#ls -lah /opt/megasync
+  ./nautilus-megasync-Fedora_42.x86_64.rpm \
+  ./thunar-megasync-Fedora_42.x86_64.rpm
 
 # Use a COPR Example:
 #
