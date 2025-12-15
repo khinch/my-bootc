@@ -27,6 +27,9 @@ curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.
 #curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
 
 rm -rf /opt/megasync || true
+mkdir -p /opt/megasync
+chmod 755 /opt/megasync
+
 dnf install -y --nogpgcheck \
   ./megasync-Fedora_42.x86_64.rpm \
 #  ./nautilus-megasync-Fedora_42.x86_64.rpm \
