@@ -13,9 +13,9 @@ set -ouex pipefail
 dnf5 install -y tmux alacritty 
 
 # Signal Desktop via COPR
-dnf5 -y copr enable asafonov/Signal-Desktop
+dnf5 -y copr enable useidel/signal-desktop
 dnf5 install -y signal-desktop
-dnf5 -y copr disable asafonov/Signal-Desktop
+dnf5 -y copr disable useidel/signal-desktop
 
 # Packages outside of Fedora repositories
 cd /tmp
