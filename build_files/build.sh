@@ -10,7 +10,18 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux alacritty 
+dnf5 install -y tmux \ 
+	alacritty \
+	clang \ 
+	cmake \
+	fatsort \
+	gitui \
+	gtypist \
+	helix \
+	neovim \
+	pdfgrep \
+	rustup \
+	stow
 
 # Signal Desktop via COPR
 dnf5 -y copr enable useidel/signal-desktop
