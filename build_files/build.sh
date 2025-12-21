@@ -9,7 +9,7 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
+# Packages from fedora repos
 dnf5 install -y \
 	alacritty \
 	clang \
@@ -27,6 +27,11 @@ dnf5 install -y \
 dnf5 -y copr enable useidel/signal-desktop
 dnf5 install -y signal-desktop
 dnf5 -y copr disable useidel/signal-desktop
+
+# Yazi via COPR
+dnf5 -y copr enable lihaohong/yazi
+dnf5 install yazi
+dnf5 -y copr disable lihaohong/yazi
 
 # Packages outside of Fedora repositories
 cd /tmp
