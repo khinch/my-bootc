@@ -30,7 +30,7 @@ dnf5 -y copr disable useidel/signal-desktop
 
 # Yazi via COPR
 dnf5 -y copr enable lihaohong/yazi
-dnf5 install yazi
+dnf5 install -y yazi
 dnf5 -y copr disable lihaohong/yazi
 
 # Packages outside of Fedora repositories
