@@ -18,6 +18,7 @@ dnf5 install -y \
 	gitui \
 	gtypist \
 	helix \
+  lldb \
 	neovim \
 	pdfgrep \
 	rustup \
