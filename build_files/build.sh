@@ -19,11 +19,16 @@ dnf5 install -y \
 	gtypist \
 	helix \
   lldb \
+  lldb \
 	neovim \
 	pdfgrep \
-  pgadmin4 \
 	rustup \
 	stow
+
+# Install pgAdmin4-desktop 
+dnf -y install \
+  https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
+dnf -y install pgadmin4-desktop
 
 # Signal Desktop via COPR
 dnf5 -y copr enable useidel/signal-desktop
@@ -56,6 +61,10 @@ dnf install -y --nogpgcheck --setopt=tsflags=noscripts \
   ./megasync-Fedora_42.x86_64.rpm \
   ./nautilus-megasync-Fedora_42.x86_64.rpm \
   ./thunar-megasync-Fedora_42.x86_64.rpm
+
+# Clean up
+dnf clean all
+rm -rf /var/cache/dnf
 
 # Use a COPR Example:
 #
