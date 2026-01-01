@@ -21,6 +21,7 @@ dnf5 install -y \
   lldb \
 	neovim \
 	pdfgrep \
+  pgadmin4 \
 	rustup \
 	stow
 
