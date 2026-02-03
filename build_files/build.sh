@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -ouex pipefail
 
@@ -23,7 +23,11 @@ dnf5 install -y \
 	neovim \
 	pdfgrep \
 	rustup \
-	stow
+	stow \
+	sway \
+  swaybg \
+  waybar \
+  foot
 
 # Install pgAdmin4-desktop 
 dnf -y install \
@@ -53,9 +57,6 @@ dnf install -y veracrypt-1.26.24-Fedora-40-x86_64.rpm
 curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm"
 curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/nautilus-megasync-Fedora_42.x86_64.rpm"
 curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
-
-rm /opt
-mkdir /opt
 
 dnf install -y --nogpgcheck --setopt=tsflags=noscripts \
   ./megasync-Fedora_42.x86_64.rpm \
