@@ -27,7 +27,12 @@ dnf5 install -y \
 	sway \
   swaybg \
   waybar \
-  foot
+  foot \
+  wofi \
+  mako \
+  grim \
+  slurp \
+  wl-clipboard
 
 # Install pgAdmin4-desktop 
 dnf -y install \
