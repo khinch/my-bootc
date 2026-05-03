@@ -34,11 +34,6 @@ dnf5 install -y \
   slurp \
   wl-clipboard
 
-# Install pgAdmin4-desktop 
-dnf -y install \
-  https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm
-dnf -y install pgadmin4-desktop
-
 # Signal Desktop via COPR
 dnf5 -y copr enable useidel/signal-desktop
 dnf5 install -y signal-desktop
@@ -59,14 +54,14 @@ rpm --checksig -v veracrypt-1.26.24-Fedora-40-x86_64.rpm
 dnf install -y veracrypt-1.26.24-Fedora-40-x86_64.rpm
 
 # Megasync
-curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/megasync-Fedora_42.x86_64.rpm"
-curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/nautilus-megasync-Fedora_42.x86_64.rpm"
-curl -LO "https://mega.nz/linux/repo/Fedora_42/x86_64/thunar-megasync-Fedora_42.x86_64.rpm"
+curl -LO "https://mega.nz/linux/repo/Fedora_44/x86_64/megasync-Fedora_44.x86_64.rpm"
+curl -LO "https://mega.nz/linux/repo/Fedora_44/x86_64/nautilus-megasync-Fedora_44.x86_64.rpm"
+curl -LO "https://mega.nz/linux/repo/Fedora_44/x86_64/thunar-megasync-Fedora_44.x86_64.rpm"
 
 dnf install -y --nogpgcheck --setopt=tsflags=noscripts \
-  ./megasync-Fedora_42.x86_64.rpm \
-  ./nautilus-megasync-Fedora_42.x86_64.rpm \
-  ./thunar-megasync-Fedora_42.x86_64.rpm
+  ./megasync-Fedora_44.x86_64.rpm \
+  ./nautilus-megasync-Fedora_44.x86_64.rpm \
+  ./thunar-megasync-Fedora_44.x86_64.rpm
 
 # Clean up
 dnf clean all
